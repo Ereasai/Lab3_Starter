@@ -1,6 +1,9 @@
 # Lab 2 - Starter
 10/7/2022 By Gunwoo Kim
 
+Link to website: https://ereasai.github.io/Lab2_Starter/
+
+
 TODO list:
 
 **Meeting minutes** are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.
