@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<!-- html: the root element; all HTML document starts with this. -->
+<!-- the lang attribute defines what language this page will be in. -->
+<html lang="en">
+
+<!-- head: contains metadata, not shown to the users. -->
+<head>
+    <!-- meta tells the browswers about this page. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title of the page, displayed on top of the screen -->
+    <title>Meeting Minutes</title>
+
+    <!-- favicon. -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<!-- body: contains the content that is visible to the user. -->
+<body style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+
+    <header style="text-align:center;">
+        <h1>Meeting Minutes</h1>
+        <h3>Date: 10/8/2022</h3>
+    </header>
+
+    <hr>
+
+    <!-- nav: for including many links, i.e. navigation items. -->
+    <nav>
+        <ul>
+            <li><a href="http://www.ucsd.edu">UCSD</a></li>
+        </ul>
+        <ol type="I">
+            <li><a href="#attendance-list">Attendance List</a></li>
+            <li><a href="#meeting-agenda">Meeting Agenda</a></li>
+            <li><a href="#meeting-notes">Meeting Notes</a></li>
+            <li><a href="#meeting-recordings">Meeting Recordings</a></li>
+            <li><a href="#unfinished-business">Unfinished Business</a></li>
+            <li><a href="#next-meeting-plans">Next Meeting Plans</a></li>
+            <li><a href="#coms-qs-concerns">Comments/Questions/Concerns</a></li>
+            <li><a href="#submit-question">Submit A Question</a></li>
+        </ol>
+        
+        
+    </nav>
+
+    <!-- main content of the document. -->
+    <main>
+
+        <section id="attendance-list"">
+            <h2>Attendance List</h2>
+            <small><i>The names are generated using random name generator. Except my own name.</i></small>
+            <ul>
+                <li> <input type="checkbox" checked> Gunwoo Kim </li>
+                <li> <input type="checkbox"> Ryan Wilkerson </li>
+                <li> <input type="checkbox" checked> Skyler Levine </li>
+                <li> <input type="checkbox" checked> Jayson Compton </li>
+                <li> <input type="checkbox"> Gilbert Copeland </li>
+            </ul>
+        </section>
+
+        <section id="meeting-agenda">
+            <h2>Meeting Agenda</h2>
+            <ul>
+                <li>Talk about many imporant things.</li>
+                <li>Team introduction.</li>
+                <li>Next meeting time.</li>
+            </ul>
+        </section>
+
+        <section id="meeting-notes">
+            <h2>Meeting Notes</h2>
+            
+            <p>Many many things happened in this meeting. So much happened in this meeting. Especially, a lot of important things happened. This is an <i>italic text</i>. And now this is an <em>emphasized text</em>. The <em>emphasized text</em> means you are giving a verbal stress. The different is that a screen reader will use emphasis to read the <em>emphasized</em> text. </p>
+            
+            <p>Now, we are on the second paragraph. </p>
+            
+            <br>
+            
+            <div style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                <P>Now, we are on the third, but with a bigger gap, and different font. It is using <i>div</i> to select this whole section,  as a block level element. </P>
+
+                <p>The fourth paragraph, also included in the div block, also has the same font. But now we can use <i>span</i> to select as inline element. Like this: <span style="font-size: 150%;">We made this part of the text bigger!</span></p>
+            </div>
+            
+            
+            Beginning of an unordered list of notes:
+            <ul>
+                <li> This is something important we talked about. </li>
+                <li> This is another thing we talked about... that was also imporant. </li>
+                <li> <b>WOW.</b> This one is REALLY imporant. 
+                    <ul>
+                        <li> It's soo important that it needed another unordered list! </li>
+                        <li> Thank you for reading my notes!! </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </section>
+        
+        <section id="meeting-recordings">
+            <h2>Meeting Recordings</h2>
+            <!-- meeting audio -->
+            <h3>Something someone said: </h3>
+            <audio controls>
+                <source src="audio_piano.wav" type="audio/wav">
+                This audio file cannot be loaded.
+            </audio>
+
+            <!-- meeting image -->
+            <h3>Something imporant to see: </h3>
+            <img title="capybara" src="images/capy.jfif" alt="capybara with birthday hat." width="500" height="200">
+
+            <!-- meeting video -->
+            <h3>Some important video:</h3>
+            <small><i>Video downloaded from www.videezy.com</i></small>
+            <br>
+            <video src="video.mp4" width="300" controls></video>
+        </section>
+
+        <section id="unfinished-business">
+            <h2>Unfinished Business </h2>
+            <small>Things to do next meeting.</small>
+            
+            <ul>
+                <li>Exact meeting times.</li>
+                <li>How to conduct daily standup.</li>
+                <li>what app are we even making?</li>
+            </ul>
+        </section>
+
+
+        <section id="next-meeting-plans">
+            <h2>Next Meeting Plans</h2>
+            <ul>
+                <li>Plan ideas.</li>
+                <li>Identify concepts from CRUD apps.</li>
+            </ul>
+        </section>
+
+        
+        <section id="coms-qs-concerns">
+            <h2>Comments/Question/Concerns</h2>
+            <ul>
+                <!-- b: displays the text in bold. -->
+                <li><b>Comment</b>: I like CSE 110.</li>
+                <li><b>Concern</b>:I am concerned that I am not getting enought sleep.</li>
+                <!-- strong: displays the text in bold, with importance. -->
+                <li>
+                    <strong>Question</strong>: What is the meaning of life?
+                    <details>
+                        <summary>The Answer</summary>
+                        <p>I don't really know. But I think it has to do with 42.</p>
+                    </details>
+                
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="submit-question">
+            <h2>Submit a Question</h2>
+            <fieldset>
+                <form>
+                    Name: 
+                    <input type="text" placeholder="enter name">
+                    Email:
+                    <input type="text" placeholder="enter email">
+                    <br>
+                    <textarea name="s" id="question" cols="60" rows="10" placeholder="enter question"></textarea>   
+                    <br>
+                    Do you wish to be emailed about updates?
+                    <input type="radio" name="email"> Yes
+                    <input type="radio" name="email"> No
+                    <br>
+                    
+                    <hr>
+                    <b>A little Survey</b>
+                    <br>
+                    Select date:
+                    <input type="date">
+                    <br>
+                    Your favorite activity:
+                    <input list="activity">
+                    <datalist id="activity">
+                        <option value="gaming">
+                        <option value="studying">
+                        <option value="sleeping">
+                    </datalist>
+                    <br>
+                    <label for="number">Your favorite number:</label>
+                    <select id="number">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                    </select>
+                    <br>
+                    <button>Submit</button>
+                    <button>Clear</button>
+                    
+                </form>
+            </fieldset>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <hr>
+
+    <footer>
+        <p> &copy; by Gunwoo Kim </p>
+    </footer>
+
+</body>
+
+
+</html>
