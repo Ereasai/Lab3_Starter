@@ -24,31 +24,82 @@
 <!-- body: contains the content that is visible to the user. -->
 <body>
 
+    <img src="images/favicon.ico" alt="alien icon" width="30" id="special-icon">
+
     <header>
-        <h1>Meeting Minutes</h1>
-        <h3>Date: 10/8/2022</h3>
+        <h1 class="main-header">Meeting Minutes</h1>
+        <h2>Date: 10/15/2022</h3>
     </header>
 
     <hr>
 
     <!-- nav: for including many links, i.e. navigation items. -->
-    <nav>
-        <ul>
-            <li><a href="http://www.ucsd.edu">UCSD</a></li>
-        </ul>
-        <ol type="I">
-            <li><a href="#attendance-list">Attendance List</a></li>
-            <li><a href="#meeting-agenda">Meeting Agenda</a></li>
-            <li><a href="#meeting-notes">Meeting Notes</a></li>
-            <li><a href="#meeting-recordings">Meeting Recordings</a></li>
-            <li><a href="#unfinished-business">Unfinished Business</a></li>
-            <li><a href="#next-meeting-plans">Next Meeting Plans</a></li>
-            <li><a href="#coms-qs-concerns">Comments/Questions/Concerns</a></li>
-            <li><a href="#submit-question">Submit A Question</a></li>
-        </ol>
-        
-        
+    <nav id="navigation" class="container">
+        <a href="http://www.ucsd.edu">UCSD</a>
+        <a href="#attendance-list">Attendance List</a>
+        <a href="#meeting-agenda">Meeting Agenda</a>
+        <a href="#meeting-notes">Meeting Notes</a>
+        <a href="#meeting-recordings">Meeting Recordings</a>
+        <a href="#unfinished-business">Unfinished Business</a>
+        <a href="#next-meeting-plans">Next Meeting Plans</a>
+        <a href="#coms-qs-concerns">Comments/Questions/Concerns</a>
+        <a href="#submit-question">Submit A Question</a>
     </nav>
+
+
+
+    <div class="container">
+        <div title="woah" class="word-boxes">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nemo.
+        </div>
+
+        <div class="word-boxes"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sed enim voluptas sapiente at suscipit nihil ducimus excepturi error iure, delectus inventore libero.
+        </div>
+
+        <div class="word-boxes">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut culpa impedit temporibus fuga quisquam voluptatibus, incidunt facere provident aliquam doloremque perspiciatis ullam, quam, excepturi sed esse qui! Dolore, natus eum! Molestias quae reiciendis aliquam nostrum quo explicabo saepe voluptates ea?
+        </div>
+
+        <div class="word-boxes"> 
+            Lorem, ipsum dolor.
+        </div>
+
+        <div class="word-boxes"> 
+            Lorem, ipsum.
+        </div>
+
+        <div class="word-boxes"> 
+            L.
+        </div>
+
+        <div id="custom-div">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut culpa impedit temporibus fuga quisquam voluptatibus, incidunt facere provident aliquam doloremque perspiciatis ullam, quam, excepturi sed esse qui! Dolore, natus eum! Molestias quae reiciendis aliquam nostrum quo explicabo saepe voluptates ea?
+        </div>
+
+        <div class="word-boxes"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sed enim voluptas sapiente at suscipit nihil ducimus excepturi error iure, delectus inventore libero.
+        </div>
+
+        <div class="word-boxes"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sed enim voluptas sapiente at suscipit nihil ducimus excepturi error iure, delectus inventore libero.
+        </div>
+
+    </div>
+
+
+    <div>
+        <span>I am a span in the beginning and isn't selected by the general child selector.</span>
+        <p>this is beginning of some paragraph.</p>
+        <p>this is a second paragraph and it is selected by the adjacent sibling combinator.</p>
+        <span>hello, I, a span, am selected by the general child selector. </span>
+        <p>i am random paragraph, and not selected by anything.</p>
+        <span>I am another span that is selected by the general child selector.</span>
+
+    </div>
+
+    
+    
 
     <!-- main content of the document. -->
     <main>
@@ -106,22 +157,38 @@
         
         <section id="meeting-recordings">
             <h2>Meeting Recordings</h2>
-            <!-- meeting audio -->
-            <h3>Something someone said: </h3>
-            <audio controls>
-                <source src="audio_piano.wav" type="audio/wav">
-                This audio file cannot be loaded.
-            </audio>
 
-            <!-- meeting image -->
-            <h3>Something imporant to see: </h3>
-            <img title="capybara" src="images/capy.jfif" alt="capybara with birthday hat." width="500" height="200">
+            <div id="meeting-recordings-container">
+                <span id="span-1">
+                    <!-- meeting audio -->
+                    <h3>Something someone said: </h3>
+                    <audio controls>
+                        <source src="audio_piano.wav" type="audio/wav">
+                        This audio file cannot be loaded.
+                    </audio>
+                </span>
+    
+                <span id="span-2">
+                    <!-- meeting image -->
+                    <h3>Something imporant to see: </h3>
+                    <img title="capybara" src="images/capy.jfif" alt="capybara with birthday hat.">
+                </span>
+    
+                <span id="span-3">
+                    <!-- meeting video -->
+                    <h3>Some important video:</h3>
+                    <small><i>Video downloaded from www.videezy.com</i></small>
+                    <br>
+                    <video src="video.mp4" controls></video>
+                </span>
+            </div>
 
-            <!-- meeting video -->
-            <h3>Some important video:</h3>
-            <small><i>Video downloaded from www.videezy.com</i></small>
-            <br>
-            <video src="video.mp4" width="300" controls></video>
+            
+        </section>
+
+        <section id="hidden-content">
+            <h2>Hidden Content</h2>
+            <p>This content will not be visible to the users...</p>
         </section>
 
         <section id="unfinished-business">
@@ -135,7 +202,6 @@
             </ul>
         </section>
 
-
         <section id="next-meeting-plans">
             <h2>Next Meeting Plans</h2>
             <ul>
@@ -143,8 +209,7 @@
                 <li>Identify concepts from CRUD apps.</li>
             </ul>
         </section>
-
-        
+   
         <section id="coms-qs-concerns">
             <h2>Comments/Question/Concerns</h2>
             <ul>
@@ -162,7 +227,6 @@
                 </li>
             </ul>
         </section>
-
 
         <section id="submit-question">
             <h2>Submit a Question</h2>
