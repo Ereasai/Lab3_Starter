@@ -1,0 +1,252 @@
+/* define a custom font */
+@font-face {
+    font-family: robato-regular;
+    src: url(/Roboto-Regular.ttf)
+}
+
+/* all selector */
+* {
+    font-family: robato-regular;
+    color: aliceblue;
+}
+
+a {
+    color: rgb(30, 144, 255);
+}
+
+body {
+    background-color: hsl(220, 19%, 15%);
+}
+
+/* element styling */
+header {
+    background-color: #2F3847;
+
+    /* trying things with box model */ 
+    /* margin with longhand; spacing between elements */
+    margin-top: 3pc; /* absolute length */
+    margin-bottom: 30pt;
+    margin-left: 0px;
+    margin-right: auto;
+
+    /* padding with longhand; spacing within the box */
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    padding-left: 1cm;
+    padding-right: 2vh;
+    padding-left: auto; /* the above assignment of 1cm is ignored. */
+    
+    /* borders with longhand; define how the borders are going to look. */
+    border-style: dotted;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-radius: 10px;
+    
+    /* text stlying */
+    text-align: center;
+    text-decoration: underline 2px;
+}
+
+section {
+    background-color: #2F3847;
+    padding: 20px;
+    margin: 20px;
+
+    border-radius: 15px;
+
+    /* filter: drop-shadow(0px 0px 10px #9696da); */
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+main {
+
+    margin: 10px 10px 10px 10px; /* margin with shorthand */
+    padding: 1cm 1cm 1cm 1cm;
+    border: 3px solid aliceblue; /* border with shorthand */
+    border-radius: 5px;
+
+    background-color: hsl(220, 19%, 15%);
+
+    /* grid parent properties */
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: minmax(40vh, auto); /* each undefined amount of rows will be at least 40vh */
+    grid-template-areas: 
+        "attendance agenda agenda agenda" 
+        "notes notes notes notes" 
+        "recs recs recs recs" 
+        "unfinished unfinished next next"
+        "comments comments question question";
+    
+}
+
+@media all and (max-width: 1200px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media all and (max-width: 700px) {
+    main {
+        display: flex;
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+    
+}
+
+footer {
+    
+}
+
+/* select elements by their id */
+/* setup grid */
+#attendance-list {
+    grid-area: attendance;
+}
+
+#meeting-agenda {
+    grid-area: agenda;
+}
+
+#meeting-notes {
+    grid-area: notes;
+}
+
+#meeting-recordings {
+    grid-area: recs;
+}
+
+#unfinished-business {
+    grid-area: unfinished;
+}
+
+#next-meeting-plans {
+    grid-area: next;
+}
+
+#coms-qs-concerns {
+    grid-area: comments;
+}
+
+#submit-question {
+    grid-area: question;
+}
+
+#span-1, #span-2, #span-3 {
+    background-color: #4a576e;
+    border-radius: 15px;
+    margin: 0.5cm;
+    padding: 15px;
+    border-color: aliceblue;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#meeting-recordings-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#meeting-recordings-container > span > img, video{
+    max-width: 30vw;
+    max-height: 30vh;
+}
+
+#special-icon {
+    position: sticky;
+    top: 10px;
+    left: 99%;
+    z-index: 10;
+    width: min-content;
+}
+
+#special-icon:active {
+    width: 100px;
+}
+
+#hidden-content {
+    color: red;
+    display: none; /* we will not be able to see this. */
+}
+
+#navigation.container > a {
+    font-size: larger;
+    margin: 10px;
+    padding: 20px;
+    background-color: #4a576e;
+}
+
+#navigation.container > a:hover {
+    font-size: larger;
+    margin: 10px;
+    padding: 20px;
+    background-color: #4a576e;
+    filter: drop-shadow(0px 0px 10px #cdcdf6);
+}
+
+/* class */
+.container {
+    display: flex;
+    align-items: flex-start;
+    align-content: space-around; /* alignment along cross axis */
+    justify-content: center; /* alignment along main axis */
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+}
+
+.word-boxes {
+    margin: 2px;
+    padding: 2px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    min-width: 5vw;
+    max-width: 20vw;
+}
+
+#custom-div {
+    background-color: green;
+    display: block; /* block elements forces a newline around it + takes up the max space possible */
+    position: relative;
+    top: -80px; /* moves the element -80 pixels relative to where it is. */
+}
+
+/* decendant combinator */
+/* selects all the decendents, while > selects only DIRECT child */
+.container div {
+    background-color: red;
+}
+
+/* adjacent sibling combinator */
+p + p {
+    color: aqua;
+}
+
+/* general sibling combinator */
+p ~ span {
+    color: purple;
+}
+
+
+/* attribute selector */
+.word-boxes[title] {
+    background-color: blue;
+}
+
+/* combination */
+h1.main-header {
+    font-size: 300%;
+}
